@@ -1,9 +1,13 @@
-
+import React from "react";
 
 let QuestionList = (props) => {
-    return <div>
-        {props.questions.map(txt => <p>{txt}</p>)}
-    </div>
-}
+	const questionsList = props.questions;
+	return (
+		<div>
+			{questionsList &&
+				questionsList.map((txt, index) => <p key={index}>{txt}</p>)}
+		</div>
+	);
+};
 
 export default QuestionList;
